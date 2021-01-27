@@ -8,7 +8,7 @@ namespace ClassMethodDemo_BankCustomer_
     {
         public void AddCustomer(Customer customer)
         {
-            Console.WriteLine(customer.Name + customer.surName + " isimli müşteri eklenmiştir");
+            Console.WriteLine(customer.Name + " " + customer.surName + " isimli müşteri eklenmiştir");
                     }
 
         public void ListCustomers(Customer[] customer)
@@ -16,18 +16,18 @@ namespace ClassMethodDemo_BankCustomer_
             foreach (Customer listCustomer in customer)
             {
                 
-                Console.WriteLine("-----------------------");
+                
                 Console.WriteLine("Banka Müşteri Numarası : " + listCustomer.Id);
                 Console.WriteLine("Müşteri Adı : " + listCustomer.Name);
                 Console.WriteLine("Müşteri Soyadı : " + listCustomer.surName);
                 Console.WriteLine("Müşteri Mesleği : " + listCustomer.Job);
                 Console.WriteLine("Kaç Yıldır Müşteri : " + listCustomer.Time);
+                Console.WriteLine("-------------------------");
                 
             }
          }
        public void DeleteCustomer(Customer customer)
         {
-            Console.WriteLine("Müşteri Siliniyor");
             Console.WriteLine(customer.Id + " numaralı " + customer.Name +" " + customer.surName + " isimli müşteri sistemden silinmiştir");
             
         }

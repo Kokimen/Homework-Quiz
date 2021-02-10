@@ -1,4 +1,5 @@
-﻿using GameProject.Properties;
+﻿using GameProject.Concrete;
+using GameProject.Properties;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +8,13 @@ namespace GameProject
 {
     class GamerManager : IGamerService
     {
+        private UserValidationManager userValidationManager;
+
+        public GamerManager(UserValidationManager userValidationManager)
+        {
+            this.userValidationManager = userValidationManager;
+        }
+
         public void Add(Gamer gamer)
         {
             Console.WriteLine(gamer.FirstName + " " + gamer.LastName + " isimli oyuncu eklendi");
